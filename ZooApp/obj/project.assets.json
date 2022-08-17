@@ -13,9 +13,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Eboba\\ZooApp\\ZooApp\\ZooApp.csproj",
-      "projectName": "ZooApp",
-      "projectPath": "D:\\Eboba\\ZooApp\\ZooApp\\ZooApp.csproj",
+      "projectUniqueName": "D:\\Eboba\\ZooApp\\ZooApp\\ZooLab.csproj",
+      "projectName": "ZooLab",
+      "projectPath": "D:\\Eboba\\ZooApp\\ZooApp\\ZooLab.csproj",
       "packagesPath": "C:\\Users\\zigmu\\.nuget\\packages\\",
       "outputPath": "D:\\Eboba\\ZooApp\\ZooApp\\obj\\",
       "projectStyle": "PackageReference",
