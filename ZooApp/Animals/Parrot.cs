@@ -1,21 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ZooLab.AnimalsClasses;
-
-namespace ZooLab.Animals
+﻿namespace ZooLab.Animals
 {
     public class Parrot : Bird
     {
-        public override int RequiredSpaceSqFt => throw new NotImplementedException();
+        public override int RequiredSpaceSqFt => 5;
 
-        public override string FavoriteFood => throw new NotImplementedException();
+        public override string FavoriteFood => new Vegetable().ToString();
 
         public override bool IsFriendlyWith(Animal animal)
         {
-            throw new NotImplementedException();
+            Turtle turtle = new Turtle();
+            Bison bison = new Bison();
+            Elephant elephant = new Elephant();
+            List<Animal> animals = new List<Animal>() { turtle, bison, elephant, this };
+            return animals.Any(a => a.ToString() == animal.ToString());
         }
     }
 }

@@ -3,7 +3,7 @@
     public class ZooApp
     {
         List<Zoo> _zoos = new List<Zoo>();
-        void AddZoo(ZooApp zoo)
+        void AddZoo(Zoo zoo)
         {
             _zoos.Add(zoo);
         }

@@ -10,7 +10,15 @@ namespace ZooLab
     {
         public string Name { get; private set; }
         public List<Animal> Animals { get; private set; }
-        public Zoo ParentZooo { get; private set; }
-        public int SqureFeet { get; private set; }
+        public Zoo ParentZoo { get; private set; }
+        public int SqureFeet { get; set; }
+
+        public Enclosure(string name, List<Animal> animals, Zoo parentZoo, int squreFeet)
+        {
+            Name = name;
+            Animals = animals;
+            ParentZoo = parentZoo;
+            SqureFeet = squreFeet;
+        }
     }
 }

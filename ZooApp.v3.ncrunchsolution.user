@@ -4,10 +4,10 @@
     <CurrentEngineMode>Run all tests automatically [Global]</CurrentEngineMode>
     <TestsWindowMenuOptions>
       <VerticalSplitMenuOption>false</VerticalSplitMenuOption>
-      <ShowPassingTestsMenuOption>false</ShowPassingTestsMenuOption>
-      <ShowFailingTestsMenuOption>true</ShowFailingTestsMenuOption>
-      <ShowUnexecutedTestsMenuOption>true</ShowUnexecutedTestsMenuOption>
-      <ShowIgnoredTestsMenuOption>true</ShowIgnoredTestsMenuOption>
+      <ShowPassingTestsMenuOption>true</ShowPassingTestsMenuOption>
+      <ShowFailingTestsMenuOption>false</ShowFailingTestsMenuOption>
+      <ShowUnexecutedTestsMenuOption>false</ShowUnexecutedTestsMenuOption>
+      <ShowIgnoredTestsMenuOption>false</ShowIgnoredTestsMenuOption>
     </TestsWindowMenuOptions>
     <TestsWindowSplitterDistance>50%</TestsWindowSplitterDistance>
   </Settings>

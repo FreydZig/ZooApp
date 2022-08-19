@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ZooLab.Animals;
 
 namespace ZooLab
 {
@@ -10,30 +11,36 @@ namespace ZooLab
     {
         public abstract int RequiredSpaceSqFt { get; }
         public abstract string FavoriteFood { get; }
-        List<FeedTime> FeedTimes { get; }
-        List<int> FeedSchedule { get; }
-        int ID { get; set; }
+        public List<FeedTime> FeedTimes { get; } = new List<FeedTime>();
+        public List<int> FeedSchedule { get; set; } = new List<int>();
+        public bool IsSick { get; set; }
+        public int ID { get; set; }
 
-        public abstract bool IsFriendlyWith(Animal animal);        
+        public abstract bool IsFriendlyWith(Animal animal);
 
-        void Feed(Food food, ZooKeeper zooKeeper)
+        public void Feed(Food food, ZooKeeper zooKeeper)
         {
-
+            if((zooKeeper.AnimalExperiences == ToString()) && (FavoriteFood == food.ToString()))
+            {
+                DateTime date = DateTime.Now;
+                FeedTime feedTime = new FeedTime() { FeedT = date, FeedByZooKeeper = zooKeeper };
+                FeedTimes.Add(feedTime);
+            }
         }
 
-        bool IsStick()
+        public bool IsStick()
         {
-            return false;
+            return IsSick;
         }
 
-        void AddFeedSchedule(List<int> hours)
+        public void AddFeedSchedule(List<int> hours)
         {
-
+            FeedSchedule = hours;
         }
 
-        void Heal(Medicine medicine)
+        public void Heal(Medicine medicine)
         {
-
+            IsSick = false;
         }
 
     }

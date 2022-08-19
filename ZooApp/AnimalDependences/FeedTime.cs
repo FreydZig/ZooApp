@@ -8,7 +8,7 @@ namespace ZooLab
 {
     public class FeedTime
     {
-        DateTime FeedT { get; set; }
-        ZooKeeper FeedByZooKeeper { get; set; }
+        public DateTime FeedT { get; set; }
+        public ZooKeeper? FeedByZooKeeper { get; set; }
     }
 }

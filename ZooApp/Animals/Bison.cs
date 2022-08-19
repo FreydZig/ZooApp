@@ -1,21 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ZooLab.AnimalsClasses;
-
-namespace ZooLab.Animals
+﻿namespace ZooLab.Animals
 {
     public class Bison : Mammal
     {
-        public override int RequiredSpaceSqFt => throw new NotImplementedException();
+        public override int RequiredSpaceSqFt => 1000;
 
-        public override string FavoriteFood => throw new NotImplementedException();
+        public override string FavoriteFood => new Grass().ToString();
 
         public override bool IsFriendlyWith(Animal animal)
         {
-            throw new NotImplementedException();
+            Elephant elephant = new Elephant();
+            return elephant.ToString() == animal.ToString();
         }
     }
 }

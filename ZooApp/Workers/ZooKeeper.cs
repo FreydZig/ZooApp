@@ -10,23 +10,30 @@ namespace ZooLab
     {
         public string FirstName { get; }
         public string LastName { get; }
-        string AnimalExperiences { get; set; }
+        public string AnimalExperiences { get; set; }
 
-        void AddAnimalExperience(Animal animal)
+        public ZooKeeper(string firstName, string lastName, string animalExperiences)
         {
-
+            FirstName = firstName;
+            LastName = lastName;
+            AnimalExperiences = animalExperiences;
         }
 
-        bool HasAnimalExperience(Animal animal)
+        public void AddAnimalExperience(Animal animal)
         {
-
-            return false;
+            AnimalExperiences = animal.ToString();
         }
 
-        bool FeedAnimal(Animal animal)
+        public bool HasAnimalExperience(Animal animal)
         {
 
-            return false;
+            return animal.ToString() == AnimalExperiences;
+        }
+
+        public bool FeedAnimal(Animal animal)
+        {
+
+            return animal.ToString() == AnimalExperiences;
         }
     }
 }
