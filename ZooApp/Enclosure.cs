@@ -8,9 +8,9 @@ namespace ZooLab
 {
     public class Enclosure
     {
-        public string Name { get; private set; }
-        public List<Animal> Animals { get; private set; }
-        public Zoo ParentZoo { get; private set; }
+        public string Name { get; set; }
+        public List<Animal> Animals { get; set; } = new List<Animal>();
+        public Zoo ParentZoo { get; set; }
         public int SqureFeet { get; set; }
 
         public Enclosure(string name, List<Animal> animals, Zoo parentZoo, int squreFeet)

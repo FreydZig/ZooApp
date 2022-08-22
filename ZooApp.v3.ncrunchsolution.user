@@ -5,10 +5,10 @@
     <TestsWindowMenuOptions>
       <VerticalSplitMenuOption>false</VerticalSplitMenuOption>
       <ShowPassingTestsMenuOption>true</ShowPassingTestsMenuOption>
-      <ShowFailingTestsMenuOption>false</ShowFailingTestsMenuOption>
+      <ShowFailingTestsMenuOption>true</ShowFailingTestsMenuOption>
       <ShowUnexecutedTestsMenuOption>false</ShowUnexecutedTestsMenuOption>
       <ShowIgnoredTestsMenuOption>false</ShowIgnoredTestsMenuOption>
     </TestsWindowMenuOptions>
-    <TestsWindowSplitterDistance>50%</TestsWindowSplitterDistance>
+    <TestsWindowSplitterDistance>72.3404235839844%</TestsWindowSplitterDistance>
   </Settings>
 </SolutionConfiguration>

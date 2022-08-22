@@ -19,20 +19,15 @@ namespace ZooLab
             AnimalExperiences = animalExperiences;
         }
 
-        public void AddAnimalExperience(Animal animal)
-        {
-            AnimalExperiences = animal.ToString();
-        }
+        public void AddAnimalExperience(Animal animal) => AnimalExperiences = animal.ToString();
 
         public bool HasAnimalExperience(Animal animal)
         {
-
             return animal.ToString() == AnimalExperiences;
         }
 
         public bool FeedAnimal(Animal animal)
         {
-
             return animal.ToString() == AnimalExperiences;
         }
     }

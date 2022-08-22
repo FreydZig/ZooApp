@@ -1,4 +1,4 @@
-using Xunit;
+using System.Collections.Generic;
 
 namespace ZooLab.tests
 {
@@ -8,7 +8,8 @@ namespace ZooLab.tests
         public void ShouldBeAbleToAddZooOnList()
         {
             ZooApp zooApp = new ZooApp();
-            
+            Zoo zoo = new Zoo(enclosures: new List<Enclosure>(), employees: new List<IEmployee>(), location: "IDK");
+            zooApp.AddZoo(zoo);
         }
     }
 }

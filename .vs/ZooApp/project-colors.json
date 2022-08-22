@@ -10,7 +10,17 @@
       "ProjectGuid": "840550dc-bc6e-4aeb-9ff7-53e8e925dab4",
       "DisplayName": "ZooLab.tests",
       "ColorIndex": 1
+    },
+    "ebce11a9-f080-4a1b-9ecd-27ae9062a1e5": {
+      "ProjectGuid": "ebce11a9-f080-4a1b-9ecd-27ae9062a1e5",
+      "DisplayName": "ZooAppConsole",
+      "ColorIndex": 2
+    },
+    "b10f2c20-f2e4-4888-9f5b-96a60ba0d01c": {
+      "ProjectGuid": "b10f2c20-f2e4-4888-9f5b-96a60ba0d01c",
+      "DisplayName": "ZooApp.Console",
+      "ColorIndex": 3
     }
   },
-  "NextColorIndex": 2
+  "NextColorIndex": 4
 }

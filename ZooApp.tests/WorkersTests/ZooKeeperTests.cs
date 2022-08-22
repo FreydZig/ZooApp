@@ -87,5 +87,17 @@ namespace ZooLab.tests
             bison.Feed(grass, zooKeeper);
             Assert.Equal(DateTime.Now.ToShortTimeString(), bison.FeedTimes[0].FeedT.ToShortTimeString());
         }
+
+        [Fact]
+        public void ShouldNotBeAbleToFeedABison()
+        {
+            Bison bison = new Bison();
+            Lion lion = new Lion();
+            Meet meet = new Meet();
+            ZooKeeper zooKeeper = new ZooKeeper(firstName: "John", lastName: "Smith", animalExperiences: bison.ToString());           
+            Assert.Throws<Exception>(() =>bison.Feed(meet, zooKeeper));
+            ZooKeeper zooKeeper1 = new ZooKeeper(firstName: "John", lastName: "Smith", animalExperiences: lion.ToString());
+            Assert.Throws<Exception>(() => bison.Feed(meet, zooKeeper1));
+        }
     }
 }

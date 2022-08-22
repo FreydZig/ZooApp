@@ -1,45 +1,90 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ZooLab
+﻿namespace ZooLab
 {
     public class Zoo
     {
-        public List<Enclosure> Enclosures { get; private set; } = new List<Enclosure>();
-        public List<IEmployee> Employees { get; private set; } = new List<IEmployee>();
-        public string Location { get; private set; }
+        public List<Enclosure> Enclosures { get; set; } = new List<Enclosure>();
+        public List<IEmployee> Employees { get; set; } = new List<IEmployee>();
+        public string? Location { get; set; }
 
-        void AddEnclosure(string name, int squreFeet)
+        public Zoo(List<Enclosure> enclosures, List<IEmployee> employees, string? location)
         {
-            
+            Enclosures = enclosures;
+            Employees = employees;
+            Location = location;
         }
 
-        void FindAvailableEnclosure(Animal animal)
+        public void AddEnclosure(string name, int squreFeet)
         {
-
+            Enclosure enclosure = new Enclosure(name: name, animals: new List<Animal>(), parentZoo: this, squreFeet: squreFeet );
+            Enclosures.Add(enclosure);
         }
 
-        void HireEmployee(IEmployee employee)
+        public void FindAvailableEnclosure(Animal animal)
         {
-
+            bool IsHave = false;
+            foreach (var enclosure in Enclosures)
+            {
+                if((animal.RequiredSpaceSqFt <= enclosure.SqureFeet)
+                    &&
+                    (!enclosure.Animals.Any()))
+                { 
+                    enclosure.Animals.Add(animal);
+                    IsHave = true;
+                    break;
+                }
+                // TODO: Реализовать проверку
+                //else
+                //{
+                //    List<Animal> animals = enclosure.Animals;
+                //    if ((animals.Count == enclosure.Animals.Count)&& (animal.RequiredSpaceSqFt <= enclosure.SqureFeet))
+                //    {
+                //        enclosure.Animals.Add(animal);
+                //        IsHave = true;
+                //        break;
+                //    }
+                //}
+            }
+            if(!IsHave)
+            throw new Exception("No have avalible enclosure");
         }
 
-        void FeedAnimals(DateTime dateTime)
+        public void HireEmployee(IEmployee employee)
         {
-
+            if (!string.IsNullOrWhiteSpace(employee.FirstName))
+                Employees.Add(employee);
+            else throw new Exception(ErrorMessages.NoNeededExperienceException);
         }
 
-        void HealAnimals()
+        public void FeedAnimals(DateTime dateTime)
         {
-
+            List<Food> foods = new List<Food>() { new Grass(), new Meet(), new Vegetable() };
+            foreach (var enclosure in Enclosures)
+            {
+                foreach(var animal in enclosure.Animals)
+                {
+                    foreach (var employees in Employees) 
+                    {
+                        if(employees is ZooKeeper)
+                            if(((ZooKeeper)employees).AnimalExperiences == animal.ToString())
+                                animal.Feed(foods.First(f => f.ToString() == animal.FavoriteFood), (ZooKeeper)employees);
+                    }
+                }
+            }
         }
 
-        void Animal(Animal animal)
+        public void HealAnimals()
         {
-
+            foreach (var enclosure in Enclosures)
+            {
+                foreach (var animal in enclosure.Animals)
+                {
+                    foreach (var employees in Employees)
+                    {
+                        if(employees is Veterinarian)
+                        ((Veterinarian)employees).HeelAnimal(animal);
+                    }
+                }
+            }
         }
     }
 }

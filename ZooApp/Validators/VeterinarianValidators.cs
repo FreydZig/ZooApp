@@ -21,10 +21,10 @@ namespace ZooLab.Validators
                 .NotEmpty().WithMessage(ErrorMessages.NoNeededExperienceException);
         }
 
-        public bool ValidateAnimals(string haveExperiences)
-        {
-            List<string> animals = new List<string>() { new Bison().ToString(), new Elephant().ToString(), new Lion().ToString(), new Parrot().ToString(), new Penguin().ToString(), new Snake().ToString(), new Turtle().ToString() };
-            return animals.Any(x => x.Equals(haveExperiences));
-        }
+        //public bool ValidateAnimals(string haveExperiences)
+        //{
+        //    List<string> animals = new List<string>() { new Bison().ToString(), new Elephant().ToString(), new Lion().ToString(), new Parrot().ToString(), new Penguin().ToString(), new Snake().ToString(), new Turtle().ToString() };
+        //    return animals.Any(x => x.Equals(haveExperiences));
+        //}
     }
 }

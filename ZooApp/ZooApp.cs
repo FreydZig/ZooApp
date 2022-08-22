@@ -2,10 +2,10 @@
 {
     public class ZooApp
     {
-        List<Zoo> _zoos = new List<Zoo>();
-        void AddZoo(Zoo zoo)
+        public List<Zoo> zoos = new List<Zoo>();
+        public void AddZoo(Zoo zoo)
         {
-            _zoos.Add(zoo);
+            zoos.Add(zoo);
         }
     }
 }
