@@ -9,7 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZooLab.tests", "ZooApp.test
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZooAppConsole", "ZooApp.Console\ZooAppConsole.csproj", "{B10F2C20-F2E4-4888-9F5B-96A60BA0D01C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Program.tests", "Program.tests\Program.tests.csproj", "{A548AC01-D4D0-4BB4-B8AC-CCE7B0AE47AE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Program.tests", "Program.tests\Program.tests.csproj", "{A548AC01-D4D0-4BB4-B8AC-CCE7B0AE47AE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{481E262C-62D6-4F27-997F-B88765BD9EFC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{D004D3B9-6280-4598-A536-31CFB471CBC9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -36,6 +40,12 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{55D67B5F-34A8-4EF8-B668-993B69F7D5E2} = {481E262C-62D6-4F27-997F-B88765BD9EFC}
+		{840550DC-BC6E-4AEB-9FF7-53E8E925DAB4} = {D004D3B9-6280-4598-A536-31CFB471CBC9}
+		{B10F2C20-F2E4-4888-9F5B-96A60BA0D01C} = {481E262C-62D6-4F27-997F-B88765BD9EFC}
+		{A548AC01-D4D0-4BB4-B8AC-CCE7B0AE47AE} = {D004D3B9-6280-4598-A536-31CFB471CBC9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F6079445-BD49-4BEE-BD74-2A25361A00A3}

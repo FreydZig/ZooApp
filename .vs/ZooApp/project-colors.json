@@ -18,9 +18,19 @@
     },
     "b10f2c20-f2e4-4888-9f5b-96a60ba0d01c": {
       "ProjectGuid": "b10f2c20-f2e4-4888-9f5b-96a60ba0d01c",
-      "DisplayName": "ZooApp.Console",
+      "DisplayName": "ZooAppConsole",
       "ColorIndex": 3
+    },
+    "2235d354-9872-487a-8f3c-193ee45d2b55": {
+      "ProjectGuid": "2235d354-9872-487a-8f3c-193ee45d2b55",
+      "DisplayName": "Program.tests",
+      "ColorIndex": 4
+    },
+    "a548ac01-d4d0-4bb4-b8ac-cce7b0ae47ae": {
+      "ProjectGuid": "a548ac01-d4d0-4bb4-b8ac-cce7b0ae47ae",
+      "DisplayName": "Program.tests",
+      "ColorIndex": 5
     }
   },
-  "NextColorIndex": 4
+  "NextColorIndex": 6
 }
